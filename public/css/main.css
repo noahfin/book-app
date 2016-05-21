@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+.navbar {
+    height: 65px;
+    background-color:  whitesmoke;
+    color: #181F39;
+ }
+ .navbar-static-top  a {
+    color: #2f6b63;
+}
+.navbar {
+    position: relative;
+}
+header h1 {
+    position: absolute;
+    left: 48%;
+    margin-left: -50px !important;  
+    display: block;
+}
+
+ .container-fluid {
+  width: 90%;
+ }
+ body {
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
+ }
+header {
+  height: 445px;
+  text-align: center;
+  background: url('/img/bookshelf.jpg') no-repeat;
+  background-size: cover;
+  background-position: 0% 20%;
+/*background-color: rgba(248, 247, 216, 0.7);*/
+  font-family: 'Roboto Slab', serif;
+ 
+}
+.intro-background {
+  height: 88%;
+  margin-top: -30px;
+
+  background-color: rgba(84,110,122 ,.4)
+}
+
+.row {
+
+}
+.center {
+  width: 100%;
+}
+.thick-border, header , .navbar {
+    border-bottom: 3px  solid #758A81;
+}
+header h1 {
+  font-size: 32px;
+  margin-top: 3px;
+  color: #2f6b63;
+  font-weight: 100;
+}
+.skinny-border , .thick-border  {
+   width: 85%;
+   margin: auto;
+   background-color: #333;
+  }
+.thick-border  {
+  text-align: center;
+  height: 48px;
+  color: #fff;
+  margin-bottom: 37px;
+}
+.thick-border > h3{
+  padding-top: 9px;
+  }
+
+.add-new-book{
+  margin: 65px auto 30px auto;
+}
+.btn-default {
+  background-color: #AB684E;
+  color: #fff;
+}
+.panel-default > .panel-heading {
+  background-color: #2c3e50;
+  color: #fff;
+
+  }
+
+ .panel-left ,.right-panel {
+    height: 220px;
+  }
+  .skinny-border {
+    height: 25px;
+  
+    background-color: #2c3e50;
+  }
+  .add-new-book .active{
+     background-color: #758A81 !important;
+  border-color: #758A81;
+}
+  .add-new-book p{
+    color: #AB684E;
+    }
+.book-box {
+  padding-top: 30px;
+  background-color: #fff;
+  height: 500px;
+}
+.list-of-books {
+  border-top: 3px solid #333;
+  margin-top: 60px;
+  padding-top: 100px;
+  background-color: rgba(84,110,122 ,.4)
+}

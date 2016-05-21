@@ -1,0 +1,12 @@
+module Ang_App
+  class Server < Sinatra::Base
+
+    get "/" do
+      erb :index
+    end
+    
+
+   
+ 
+  end
+end
