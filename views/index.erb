@@ -80,7 +80,7 @@
                 <div class="panel-heading "> Password Strength Meter {{passwordStrength}} </div>
                 <div class="panel-body">
                   <div class="progress" >
-                    <div class="progress-bar" ng-class="{'progress-bar-success' : isPasswordStrong(), 'progress-bar-warring': isPasswordOk(), 'progress-bar-danger' : isPasswordWeak()}"  role="progressbar" aria-valuenow="{{passwordStrength}}"
+                    <div class="progress-bar" ng-class="{'progress-bar-success' : isPasswordStrong(), 'progress-bar-warning': isPasswordOk(), 'progress-bar-danger' : isPasswordWeak()}"  role="progressbar" aria-valuenow="{{passwordStrength}}"
                   aria-valuemin="0" aria-valuemax="100" style="width:{{passwordStrength}}%"
                       ></div>
                   </div>
@@ -110,8 +110,8 @@
 
       </div>
      </div>
-    <!--  <div class="skinny-border"></div>
- -->    </section>
+
+   </section>
 
     <section class="list-of-books" ng-controller="MainController">
        <div class="thick-border"><h3>{{title}}</h2></div>

@@ -1,6 +1,6 @@
 
 app.service('Password', function () {
-       //Your Code
+       //Password percentage code
        function getStrength(pass) {
        	 var score = 0; 
        	 if (!pass) {
