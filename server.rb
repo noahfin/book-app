@@ -4,21 +4,25 @@ module Ang_App
 
     get "/" do
       KEY = ENV['BOOKS_KEY']
-     
-      # uri = URI.encode(" https://www.googleapis.com/demo/v1?key="+ key) 
-      # @books = HTTParty.get(uri).to_json 
-
       erb :index
     end
-    get "/books" do
+    get "/json" do
       content_type :json
-      KEY = ENV['BOOKS_KEY']
-     
-      uri = URI.encode("https://www.googleapis.com/books/v1/volumes?q={science fiction}?key="+ KEY) 
-      @books = HTTParty.get(uri).to_json 
-      erb :books
+        File.read('./views/mock.json')
     end
    
- 
+    get "/books" do
+      content_type :json
+      KEY = ENV['BOOKS_KEY']  
+      uri = URI.encode("https://www.googleapis.com/books/v1/volumes?q={eath sicence the phe physcial setting}?key="+ KEY) 
+      @books = HTTParty.get(uri).to_a
+      @books_json = []
+      @books[2][1].each_with_index do |book, i |
+        @books_json.push(book['volumeInfo'].to_json)
+      end
+       @books_json.to_json
+      erb :books
+    end
+
   end
 end

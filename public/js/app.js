@@ -1,11 +1,48 @@
 var app = angular.module("bookApp", []);
 
-app.controller('MainController',  function ($scope) {	
+app.controller('MainController',  function ($scope, , GetBooks) {	
 	$scope.title = 'Top Sellers in Books';
 	$scope.books = ['pop1.jpg', 'pop2.jpg', 'pop3.jpg', 'pop4.jpg'];
 
+  $scope.bookJson = GetBooks.getBooks;
+
+
 
 });
+
+   //  var request = $http({
+			//   url: '/books',
+			//   method: 'GET',
+			//   transformResponse: [function (data) {
+			//       // Do whatever you want!
+			//       	$scope.data =data;
+			//      return data;
+			//   }]
+			// });
+
+   //  request.then(function (data) {/* access data or $scope.data in here */
+
+   //  	$scope.$apply(function () {
+   //           $scope.bookData = $scope.data;
+   //      });
+
+   //  	 $scope.bookData = $scope.data;
+   //  	console.log($scope.data)
+   //  });
+
+
+	 //  	$http.get('/books').success(function(response){
+		// 	console.log(response);
+		// 	$scope.data = response;
+		// })
+	
+	
+
+
+});
+
+
+
 
 app.controller('PasswordController',  function ($scope, Password) {		 
 	$scope.$watch('user.password', function(pass) {

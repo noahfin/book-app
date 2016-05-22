@@ -1,0 +1,131 @@
+{
+kind: "books#volumes",
+totalItems: 2,
+items: [
+{
+kind: "books#volume",
+id: "jVfY62L2hzwC",
+etag: "N8IXSf/9BXY",
+selfLink: "https://www.googleapis.com/books/v1/volumes/jVfY62L2hzwC",
+volumeInfo: {
+title: "Reviewing Earth Science",
+subtitle: "The Physical Setting",
+authors: [
+"Thomas McGuire"
+],
+publishedDate: "2004-04-19",
+description: "The purpose of this review book is to provide a complete review of the NYS Core Curriculum for the Physical Setting:Earth Science.",
+industryIdentifiers: [
+{
+type: "ISBN_10",
+identifier: "1567659004"
+},
+{
+type: "ISBN_13",
+identifier: "9781567659009"
+}
+],
+readingModes: {
+text: false,
+image: false
+},
+pageCount: 311,
+printType: "BOOK",
+categories: [
+"Juvenile Nonfiction"
+],
+maturityRating: "NOT_MATURE",
+allowAnonLogging: false,
+contentVersion: "preview-1.0.0",
+imageLinks: {
+smallThumbnail: "http://books.google.com/books/content?id=jVfY62L2hzwC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+thumbnail: "http://books.google.com/books/content?id=jVfY62L2hzwC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+},
+language: "en",
+previewLink: "http://books.google.com/books?id=jVfY62L2hzwC&q=%7Beath+sicence+the+phe+physcial+setting%7D%3Fkey%3DAIzaSyBgVr2trgq9xA-8wPVwTbYPppe6dynDpWk&dq=%7Beath+sicence+the+phe+physcial+setting%7D%3Fkey%3DAIzaSyBgVr2trgq9xA-8wPVwTbYPppe6dynDpWk&hl=&cd=1&source=gbs_api",
+infoLink: "http://books.google.com/books?id=jVfY62L2hzwC&dq=%7Beath+sicence+the+phe+physcial+setting%7D%3Fkey%3DAIzaSyBgVr2trgq9xA-8wPVwTbYPppe6dynDpWk&hl=&source=gbs_api",
+canonicalVolumeLink: "http://books.google.com/books/about/Reviewing_Earth_Science.html?hl=&id=jVfY62L2hzwC"
+},
+saleInfo: {
+country: "US",
+saleability: "NOT_FOR_SALE",
+isEbook: false
+},
+accessInfo: {
+country: "US",
+viewability: "NO_PAGES",
+embeddable: false,
+publicDomain: false,
+textToSpeechPermission: "ALLOWED",
+epub: {
+isAvailable: false
+},
+pdf: {
+isAvailable: false
+},
+webReaderLink: "http://books.google.com/books/reader?id=jVfY62L2hzwC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+accessViewStatus: "NONE",
+quoteSharingAllowed: false
+},
+searchInfo: {
+textSnippet: "The purpose of this review book is to provide a complete review of the NYS Core Curriculum for the Physical Setting:Earth Science."
+}
+},
+{
+kind: "books#volume",
+id: "tKSfkgAACAAJ",
+etag: "RDzEhghitfA",
+selfLink: "https://www.googleapis.com/books/v1/volumes/tKSfkgAACAAJ",
+volumeInfo: {
+title: "Earth Science the Physical Setting",
+authors: [
+"Thomas McGuire"
+],
+publishedDate: "2010-09",
+industryIdentifiers: [
+{
+type: "ISBN_10",
+identifier: "1567659462"
+},
+{
+type: "ISBN_13",
+identifier: "9781567659467"
+}
+],
+readingModes: {
+text: false,
+image: false
+},
+printType: "BOOK",
+maturityRating: "NOT_MATURE",
+allowAnonLogging: false,
+contentVersion: "preview-1.0.0",
+language: "en",
+previewLink: "http://books.google.com/books?id=tKSfkgAACAAJ&dq=%7Beath+sicence+the+phe+physcial+setting%7D%3Fkey%3DAIzaSyBgVr2trgq9xA-8wPVwTbYPppe6dynDpWk&hl=&cd=2&source=gbs_api",
+infoLink: "http://books.google.com/books?id=tKSfkgAACAAJ&dq=%7Beath+sicence+the+phe+physcial+setting%7D%3Fkey%3DAIzaSyBgVr2trgq9xA-8wPVwTbYPppe6dynDpWk&hl=&source=gbs_api",
+canonicalVolumeLink: "http://books.google.com/books/about/Earth_Science_the_Physical_Setting.html?hl=&id=tKSfkgAACAAJ"
+},
+saleInfo: {
+country: "US",
+saleability: "NOT_FOR_SALE",
+isEbook: false
+},
+accessInfo: {
+country: "US",
+viewability: "NO_PAGES",
+embeddable: false,
+publicDomain: false,
+textToSpeechPermission: "ALLOWED",
+epub: {
+isAvailable: false
+},
+pdf: {
+isAvailable: false
+},
+webReaderLink: "http://books.google.com/books/reader?id=tKSfkgAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+accessViewStatus: "NONE",
+quoteSharingAllowed: false
+}
+}
+]
+}
