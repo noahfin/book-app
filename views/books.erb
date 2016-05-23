@@ -1,6 +1,10 @@
 
- <center><h1>Search for books</h1></center>
-<section class="list-of-books" ng-controller="MainController">
+ <center><div class="search-head">  <a href="http://www.freepik.com" title="Freepik"><img src="/img/users-settings.png"></a><a href="http://www.flaticon.com" title="Flaticon"></a> <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"></a>
+
+<p class="search-heading">search for books</p>
+</div>
+ </center>
+<section class=" search-sec" ng-controller="MainController">
 
      <div class="container"> 
      	           <div class="col col-lg-6 ">
@@ -46,7 +50,13 @@
                 <%end%>
 
                  <h4><%=two_books[0]['title']%></h4>
-                 <p> Author:<%=two_books[0]['authors']%></p>
+                 
+                 <span> Authors:</span>
+                 <% two_books[0]['authors'].each do |author| %>
+                  <span><%=author + ', '%></span> 
+                 <%end%>
+                 <br>
+                 <br>
                  <p class="desc-bx"><%= two_books[0]['description']%></p>
                  <a href="<%=  two_books[0]['previewLink']%>">View</a>
                  <img src="" alt="">  
@@ -59,7 +69,12 @@
                 <%end%>
 
                  <h4><%=two_books[1]['title']%></h4>
-                 <p> Author:<%=two_books[1]['authors']%></p>
+                <span> Authors:</span>
+                 <% two_books[1]['authors'].each do |author| %>
+                  <span><%=author + ', '%></span> 
+                 <%end%>
+                 <br>
+                 <br>
                  <p class="desc-bx"><%= two_books[1]['description']%></p>
                  <a href="<%= two_books[1]['previewLink']%>">View</a>
                  <img src="" alt="">  

@@ -13,7 +13,7 @@ module Ang_App
 
     get "/books" do 
       KEY = ENV['BOOKS_KEY']  
-      uri = URI.encode("https://www.googleapis.com/books/v1/volumes?q={ data structure }?key="+ KEY) 
+      uri = URI.encode("https://www.googleapis.com/books/v1/volumes?q={ Algorithms and Data Structures}?key="+ KEY) 
       @books = HTTParty.get(uri).to_a
       @books_json = []
       @books[2][1].each_with_index do |book, i |

@@ -116,15 +116,32 @@ header h1 {
 }
 
 .desc-bx {
-  height: 120px;
+  max-height: 160px;
   overflow: scroll;
 }
 .panel-search {
+  margin-top: -50px;
   height: 205px;
   margin-top: -40px;
 }
 
+.search-sec {
+  margin-top: -20px;
+}
 
 .without-pad {
   margin-left: -13px;
+}
+.search-head {
+   background: url('/img/blue-background.jpg') no-repeat;
+  background-size: cover;
+  padding: 22px 20px 14px 20px;
+  border-bottom: 3px solid #000;
+
+}
+.search-heading {
+  margin-top: 5px;
+}
+.search-sec {
+  margin-top:  65px;
 }
