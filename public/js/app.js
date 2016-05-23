@@ -12,7 +12,8 @@ app.controller('MainController',  function ($scope, dataService) {
 
 
 
-	   $scope.data = response.data
+	   $scope.data =    angular.fromJson(response.data);
+	   console.log(typeof($scope.data));
 	});
 
 
@@ -42,23 +43,23 @@ app.controller('PasswordController',  function ($scope, Password) {
 		}
 
 	});
-	//  $scope.invaild = true
-	// $scope.isInputVaild = function(input) {
-	// 	var matches = input.$modelValue.match(/\d+/g);
-	//   var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\:<>\?]/);
-	// 	var hasSpecialChar = pattern.test(input.$modelValue);
-	// 	if (input.$modelValue.length > 6 && matches !== null && hasSpecialChar){
-	// 		 $scope.vaild = false;
-	// 		return true;
-	// 		}
-	// 		else {
-	// 			 $scope.vaild = true;
-	// 		}
-	// }
+	 $scope.invaild = true
+	$scope.isInputVaild = function(input) {
+		var matches = input.$modelValue.match(/\d+/g);
+	  var pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\:<>\?]/);
+		var hasSpecialChar = pattern.test(input.$modelValue);
+		if (input.$modelValue.length > 6 && matches !== null && hasSpecialChar){
+			 $scope.vaild = false;
+			return true;
+			}
+			else {
+				 $scope.vaild = true;
+			}
+	}
 
-	// $scope.isInputInvaild = function(input) {
-	// 	 return $scope.vaild;
-	// }
+	$scope.isInputInvaild = function(input) {
+		 return $scope.vaild;
+	}
 
 
 

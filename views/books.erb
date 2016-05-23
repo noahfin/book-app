@@ -1,5 +1,62 @@
 
-	<%= @books_json %>
+<section class="list-of-books" ng-controller="MainController">
+     <div class="container"> <pre><%= @books_json %></pre>
+
+     	<br>
+     	<div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">Submit</button>
+            </div>
+        </div>
+
+     </div>
+  
+
+       <div class="thick-border"><h3>Search for books</h2></div>
+        <div class="container">
+         
+         	<% @books_json.each_with_index do |book, index| %>
+          <div class="row" >
+          	
+           <div class="col-lg-6 ">
+            <div class="thumbnail book-box">
+               <%=book['title']%>
+             
+               <p>Authors</p>
+               <p> by:<%=book['authors']%></p>
+               <p><%= book['description']%></p>
+               <a href="<%= book['previewLink']%>">View</a>
+						
+
+							<% books = book['imageLinks'].to_a.drop(1).each do |imageLink|%>
+
+               
+							<img src="<%= imageLink[1] %>">
+               
+
+               <%end%>
+               <img src="" alt="">
+             
+              </div>
+          </div>
+    
+
+        <% if index % 3 == 0 %>
+          <div  class="row">
+           <div class="col-lg-6  ">
+            <a href="#" class="thumbnail book-box">
+              <%=book['title']%>
+            </a>
+         
+        
+      </div>
+    </div>
+    <% end%>
+     <% end%>
+  </div>
+    </section>
 
 
 
+description
