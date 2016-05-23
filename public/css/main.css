@@ -86,7 +86,7 @@ header h1 {
   }
 
  .panel-left ,.right-panel {
-    height: 220px;
+    min-height: 220px;
   }
   .skinny-border {
     height: 25px;

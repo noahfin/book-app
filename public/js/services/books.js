@@ -1,10 +1,6 @@
-app.service('GetBooks', function ($http) {
-this.getBooks = function() {
-	$http.get('/books')
-	.then(function(response) {
-		console.log(response.data);
-		return response.data
-	})
+app.service('dataService', function ($http) {
+this.getBooks = function(callback) {
+	$http.get('/books').then(callback)
 }
 
-}
+});
