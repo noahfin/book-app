@@ -1,60 +1,75 @@
 
+ <center><h1>Search for books</h1></center>
 <section class="list-of-books" ng-controller="MainController">
-     <div class="container"> <pre><%= @books_json %></pre>
 
-     	<br>
-     	<div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
+     <div class="container"> 
+     	           <div class="col col-lg-6 ">
+            <div class="panel panel-default panel-search without-pad" >
+              <!-- Default panel contents -->
+              <div class="panel-heading ">Find books</div>
+              <div class="panel-body">
+                <div class="input-group">
+		            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+		            <div class="input-group-btn">
                 <button class="btn btn-default" type="submit">Submit</button>
-            </div>
-        </div>
+		            </div>
+					        </div>
 
-     </div>
-  
-
-       <div class="thick-border"><h3>Search for books</h2></div>
-        <div class="container">
-         
-         	<% @books_json.each_with_index do |book, index| %>
-          <div class="row" >
-          	
-           <div class="col-lg-6 ">
-            <div class="thumbnail book-box">
-               <%=book['title']%>
-             
-               <p>Authors</p>
-               <p> by:<%=book['authors']%></p>
-               <p><%= book['description']%></p>
-               <a href="<%= book['previewLink']%>">View</a>
-						
-
-							<% books = book['imageLinks'].to_a.drop(1).each do |imageLink|%>
-
-               
-							<img src="<%= imageLink[1] %>">
-               
-
-               <%end%>
-               <img src="" alt="">
-             
-              </div>
-          </div>
-    
-
-        <% if index % 3 == 0 %>
-          <div  class="row">
-           <div class="col-lg-6  ">
-            <a href="#" class="thumbnail book-box">
-              <%=book['title']%>
-            </a>
-         
-        
-      </div>
-    </div>
-    <% end%>
-     <% end%>
+					     </div>
+               </div>
+             </div>
+            
+            <div class="col col-lg-6 book-list">
+            <div class="list-group  panel-search ">
+					  <a href="#" class="list-group-item active">
+					    Book list
+					  </a>
+					  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+					  <a href="#" class="list-group-item">Morbi leo risus</a>
+					  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+					  <a href="#" class="list-group-item">Vestibulum at eros</a>
+					</div>
+				 </div>
+     	<br>
+     	
   </div>
+
+      
+        <div class="container">
+          
+           	<% @books_json.to_a.each_slice(2) do |two_books| %>
+            <div class="row" >          	
+             <div class="col-lg-6 ">
+              <div class="thumbnail book-box">
+              	<% books = two_books[0]['imageLinks'].to_a.drop(1).each do |imageLink|%> 
+  							<img src="<%= imageLink[1] %>"> 
+                <%end%>
+
+                 <h4><%=two_books[0]['title']%></h4>
+                 <p> Author:<%=two_books[0]['authors']%></p>
+                 <p class="desc-bx"><%= two_books[0]['description']%></p>
+                 <a href="<%=  two_books[0]['previewLink']%>">View</a>
+                 <img src="" alt="">  
+                </div>
+             </div>
+             <div class="col-lg-6 ">
+              <div class="thumbnail book-box">
+                <% books = two_books[1]['imageLinks'].to_a.drop(1).each do |imageLink|%> 
+                <img src="<%= imageLink[1] %>"> 
+                <%end%>
+
+                 <h4><%=two_books[1]['title']%></h4>
+                 <p> Author:<%=two_books[1]['authors']%></p>
+                 <p class="desc-bx"><%= two_books[1]['description']%></p>
+                 <a href="<%= two_books[1]['previewLink']%>">View</a>
+                 <img src="" alt="">  
+                </div>
+             </div>
+            </div>
+            
+        <% end%>
+     </div>
+ 
     </section>
 
 
